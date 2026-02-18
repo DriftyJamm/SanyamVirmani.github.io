@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #020617, #020617);
+  color: white;
+}
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(120deg,#0ea5e9,#6366f1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+}
+
+.hero h3 {
+  margin-top: 10px;
+}
+
+.hero p {
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+
+nav {
+  background: rgba(0,0,0,0.7);
+  padding: 12px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 70px 15px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+
+.glass {
+  background: rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+  gap: 15px;
+}
+
+.grid div {
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.grid div:hover {
+  background: #38bdf8;
+  color: black;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 25px;
+}
+
+.card {
+  padding: 25px;
+  border-radius: 16px;
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 25px #38bdf8;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 15px;
+  border: 2px solid #38bdf8;
+  transition: 0.4s;
+}
+
+.gallery img:hover {
+  transform: scale(1.08);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: black;
+}
+
+
+.top-controls {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  gap: 12px;
+  z-index: 999;
+}
+
+.resume-btn {
+  background: linear-gradient(135deg,#38bdf8,#6366f1);
+  color: black;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.resume-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 28px;
+}
+
+.switch input { display: none; }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background: #38bdf8;
+}
+
+input:checked + .slider:before {
+  transform: translateX(27px);
+}
+
+/* Light Mode */
+body.light {
+  background: #f9fafb;
+  color: black;
+}
+
+body.light nav {
+  background: rgba(255,255,255,0.9);
+}
+
+body.light .glass {
+  background: rgba(0,0,0,0.05);
+}
+
+body.light .grid div {
+  background: rgba(0,0,0,0.07);
+}
+
+body.light .card:hover {
+  box-shadow: 0 0 25px #6366f1;
+}
